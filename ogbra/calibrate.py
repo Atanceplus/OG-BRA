@@ -1,15 +1,15 @@
-from ogphl import macro_params, income
-from ogphl import input_output as io
+from ogbra import macro_params, income
+from ogbra import input_output as io
 import os
 import numpy as np
 import datetime
 from ogcore import demographics
 
-UN_COUNTRY_CODE = "608"
+UN_COUNTRY_CODE = "076"
 
 
 class Calibration:
-    """OG-PHL calibration class"""
+    """OG-BRA calibration class"""
 
     def __init__(
         self,

@@ -4,7 +4,7 @@ Tests of income.py module
 
 import pytest
 import numpy as np
-from ogphl import income
+from ogbra import income
 
 
 # @pytest.mark.parametrize(

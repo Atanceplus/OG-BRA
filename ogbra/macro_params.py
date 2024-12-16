@@ -1,7 +1,7 @@
 """
 This module uses data from World Bank WDI, World Bank Quarterly Public
 Sector Debt (QPSD) database, the IMF, and UN ILO to find values for
-parameters for the OG-PHL model that rely on macro data for calibration.
+parameters for the OG-BRA model that rely on macro data for calibration.
 """
 
 # imports
@@ -17,7 +17,7 @@ from io import StringIO
 def get_macro_params(
     data_start_date=datetime.datetime(1947, 1, 1),
     data_end_date=datetime.datetime(2023, 1, 1),
-    country_iso="PHL",
+    country_iso="BRA",
 ):
     """
     Compute values of parameters that are derived from macro data
@@ -70,7 +70,7 @@ def get_macro_params(
         wb_data_a = wb_data_a.set_index("year")
         # Compute macro parameters from WB data
         # Latest from WB WDI data is 2014, so use: https://www.treasury.gov.ph/?p=64737
-        macro_parameters["initial_debt_ratio"] = 0.60
+        macro_parameters["initial_debt_ratio"] = 0.56
         macro_parameters["initial_foreign_debt_ratio"] = (
             pd.Series(
                 wb_data_a[r"External debt stocks (% of GNI)"]
@@ -156,8 +156,8 @@ def get_macro_params(
     # alpha_T, non-social security benefits as a fraction of GDP
     # can't find this specifically, so use primary expenditures minus
     # final consumption expenditures
-    # source: https://www.imf.org/external/datamapper/profile/PHL
-    macro_parameters["alpha_T"] = [0.2391 - 0.142]
+    # source: https://www.tesourotransparente.gov.br/publicacoes/central-government-primary-balance-rtn-english/2024/10
+    macro_parameters["alpha_T"] = [0.094]
 
     """"
     Esimate the discount on sovereign yields relative to private debt

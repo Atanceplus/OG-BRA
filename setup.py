@@ -4,21 +4,21 @@ with open("README.md", "r") as readme_file:
     longdesc = readme_file.read()
 
 setuptools.setup(
-    name="ogphl",
+    name="ogbra",
     version="0.0.7",
-    author="Marcelo LaFleur, Richard W. Evans, and Jason DeBacker",
+    author="Marcelo LaFleur, Richard W. Evans, Jason DeBacker, and Aidan Atance",
     license="CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
     description="Philippines Calibration for OG-Core",
     long_description_content_type="text/markdown",
     long_description=longdesc,
-    keywords="PHL Philippines calibration of large scale overlapping generations model of fiscal policy",
+    keywords="BRA Brazil calibration of large scale overlapping generations model of fiscal policy",
     url="https://github.com/EAPD-DRB/OG-PHL/",
-    download_url="https://github.com/EAPD-DRB/OG-PHL/",
+    download_url="https://github.com/Atanceplus/OG-BRA",
     project_urls={
         "Issue Tracker": "https://github.com/EAPD-DRB/OG-PHL/issues",
     },
-    packages=["ogphl"],
-    package_data={"ogphl": ["ogphl_default_parameters.json", "data/*"]},
+    packages=["ogbra"],
+    package_data={"ogbra": ["ogbra_default_parameters.json", "data/*"]},
     include_packages=True,
     python_requires=">=3.7.7, <3.13",
     install_requires=[

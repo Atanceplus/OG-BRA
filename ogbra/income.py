@@ -12,7 +12,7 @@ CUR_PATH = os.path.abspath(os.path.dirname(__file__))
 OUTPUT_DIR = os.path.join(CUR_PATH, "OUTPUT", "ability")
 
 
-def get_e_interp(E, S, J, lambdas, age_wgts, gini_to_match=40.7, plot=False):
+def get_e_interp(E, S, J, lambdas, age_wgts, gini_to_match=52.0, plot=False):
     """
     This function takes the calibrated lifetime earnings profiles
     (abilities, e matrix) from OG-USA and then adjusts the shape of those
@@ -37,8 +37,8 @@ def get_e_interp(E, S, J, lambdas, age_wgts, gini_to_match=40.7, plot=False):
         age_wgts (Numpy array): distribution of population in each age
             group, length S
         gini_to_match (float): Gini coefficient to match, default is
-            40.7, the Gini coefficient for PHL in 2023
-            https://data.worldbank.org/indicator/SI.POV.GINI
+            52.0, the Gini coefficient for BRA in 2022
+            https://data.worldbank.org/indicator/SI.POV.GINI?locations=BR&most_recent_value_desc=true
         plot (bool): if True, creates plots of emat_orig and the new
             interpolated emat_new
 

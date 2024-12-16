@@ -2,7 +2,7 @@
 Tests of macro_params.py module
 """
 
-from ogphl import macro_params
+from ogbra import macro_params
 
 
 def test_get_macro_params():
